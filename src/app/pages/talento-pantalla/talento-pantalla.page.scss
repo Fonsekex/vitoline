@@ -1,0 +1,112 @@
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.talento{
+    text-align: center;
+    font-weight: 600;
+    color: #E81E25;
+    margin-top: -1%;
+}
+
+.imagen{
+    border-radius: 52px;
+    border: 4px solid;
+    border-color: #E81E25;
+}
+.nombre{
+    color: black;
+    font-weight: 600;
+    padding-bottom: 0px !important;
+    margin-bottom: 0px;
+}
+.programa{
+    color: #E81E25;
+    font-weight: 700;
+    padding-top: 0% !important;
+    margin-top: 0% !important;
+    
+    
+}
+.icono{
+    color: #E81E25;
+    margin-top: 15%;
+}
+
+.linea{
+    color: #E81E25;
+}
+
+hr{
+    color: #E81E25;
+    width: 100;
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.animatedapa {
+    background-image: url(/css/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-top:95px;
+    margin-bottom:60px;
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+ }
+ 
+ @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+ 
+ @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+ 
+ .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+ }

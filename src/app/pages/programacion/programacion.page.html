@@ -1,0 +1,175 @@
+<app-header></app-header>
+
+<ion-content>
+  
+ <!-- Searchbar with danger color -->
+     <!-- Scrollable Segment -->
+  <ion-segment (ionChange)="segmentChanged($event)" scrollable value={{this.ruta}}>
+    <ion-segment-button style="min-width: auto;" value="lunes">
+      <ion-label  >Lunes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button style="min-width: auto;" value="martes">
+      <ion-label  >Martes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button style="min-width: auto;" value="miercoles">
+      <ion-label  >Miercoles</ion-label>
+    </ion-segment-button>
+    <ion-segment-button style="min-width: auto;" value="jueves">
+      <ion-label  >Jueves</ion-label>
+    </ion-segment-button>
+    <ion-segment-button style="min-width: auto;" value="viernes">
+      <ion-label  >Viernes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button style="min-width: auto;" value="sabado">
+        <ion-label  >Sábado</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+    <div *ngIf="this.ruta == 'lunes'" >
+      <div *ngFor="let p of programacionl" >
+          <ion-card  *ngFor="let sub of p.childres"  >
+              <ion-row>
+                <ion-col style="margin: auto;text-align: center"  size="4" >             
+                    <img  style="width: 43%;"  src="../../../assets/imagenes/logovito.svg" />
+        
+                  </ion-col>
+                    
+                  <ion-col  size="8">
+                      <p style="font-weight:700" >
+                          {{sub.programa}}
+                      </p>
+                      <p style="font-weight: 600;
+                      color: red;" >
+                        {{sub.hora}}
+                      </p>
+        
+                  </ion-col>
+              </ion-row>
+          </ion-card>
+      </div>
+   </div>
+  
+   <div *ngIf="this.ruta == 'martes'" >
+      <div *ngFor="let p of programacionm" >
+          <ion-card  *ngFor="let sub of p.childres"  >
+              <ion-row>
+                <ion-col style="margin: auto;text-align: center"  size="4" >             
+                    <img  style="width: 43%;"  src="../../../assets/imagenes/logovito.svg" />
+        
+                  </ion-col>
+                    
+                  <ion-col  size="8">
+                      <p style="font-weight:700" >
+                          {{sub.programa}}
+                      </p>
+                      <p style="font-weight: 600;
+                      color: red;" >
+                        {{sub.hora}}
+                      </p>
+        
+                  </ion-col>
+              </ion-row>
+          </ion-card>
+      </div>
+   </div>
+  
+   <div *ngIf="this.ruta == 'miercoles'" >
+      <div *ngFor="let p of programacionmi" >
+          <ion-card  *ngFor="let sub of p.childres"  >
+              <ion-row>
+                <ion-col style="margin: auto;text-align: center"  size="4" >             
+                    <img  style="width: 43%;"  src="../../../assets/imagenes/logovito.svg" />
+        
+                  </ion-col>
+                    
+                  <ion-col  size="8">
+                      <p style="font-weight:700" >
+                          {{sub.programa}}
+                      </p>
+                      <p style="font-weight: 600;
+                      color: red;" >
+                        {{sub.hora}}
+                      </p>
+        
+                  </ion-col>
+              </ion-row>
+          </ion-card>
+      </div>
+   </div>
+  
+   <div *ngIf="this.ruta == 'jueves'" >
+      <div *ngFor="let p of programacionju" >
+          <ion-card  *ngFor="let sub of p.childres"  >
+              <ion-row>
+                <ion-col style="margin: auto;text-align: center"  size="4" >             
+                    <img  style="width: 43%;"  src="../../../assets/imagenes/logovito.svg" />
+        
+                  </ion-col>
+                    
+                  <ion-col  size="8">
+                      <p style="font-weight:700" >
+                          {{sub.programa}}
+                      </p>
+                      <p style="font-weight: 600;
+                      color: red;" >
+                        {{sub.hora}}
+                      </p>
+        
+                  </ion-col>
+              </ion-row>
+          </ion-card>
+      </div>
+   </div>
+  
+   <div *ngIf="this.ruta == 'viernes'" >
+      <div *ngFor="let p of programacionvi" >
+          <ion-card  *ngFor="let sub of p.childres"  >
+              <ion-row>
+                <ion-col style="margin: auto;text-align: center"  size="4" >             
+                    <img  style="width: 43%;"  src="../../../assets/imagenes/logovito.svg" />
+        
+                  </ion-col>
+                    
+                  <ion-col  size="8">
+                      <p style="font-weight:700" >
+                          {{sub.programa}}
+                      </p>
+                      <p style="font-weight: 600;
+                      color: red;" >
+                        {{sub.hora}}
+                      </p>
+        
+                  </ion-col>
+              </ion-row>
+          </ion-card>
+      </div>
+   </div>
+  
+   <div *ngIf="this.ruta == 'sabado'" >
+      <div *ngFor="let p of programacionsa" >
+          <ion-card  *ngFor="let sub of p.childres"  >
+              <ion-row>
+                <ion-col style="margin: auto;text-align: center"  size="4" >             
+                    <img  style="width: 43%;"  src="../../../assets/imagenes/logovito.svg" />
+        
+                  </ion-col>
+                    
+                  <ion-col  size="8">
+                      <p style="font-weight:700" >
+                          {{sub.programa}}
+                      </p>
+                      <p style="font-weight: 600;
+                      color: red;" >
+                        {{sub.hora}}
+                      </p>
+        
+                  </ion-col>
+              </ion-row>
+          </ion-card>
+      </div>
+   </div>
+
+ 
+
+  
+
+</ion-content>

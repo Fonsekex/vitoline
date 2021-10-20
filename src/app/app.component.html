@@ -1,3 +1,59 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar class="new-background-color" >
+        <ion-title>
+          <a  href="https://www.instagram.com/vitotvo.ec/" target="_blank" >
+            <ion-icon class="color-icon" size="large" name="logo-instagram"></ion-icon>  
+          </a>
+         <a href="https://www.youtube.com/channel/UCi1P9XwaAGWrMndBCn2_2Zg" target="_blank" >
+           <ion-icon  class="color-icon" style="padding-left: 5px;" size="large" name="logo-youtube"></ion-icon>
+         </a>
+         <a href="https://www.tiktok.com/search?q=vitotvo_ec&t=1633998505764" target="_blank" >
+          <ion-icon  class="color-icon" style="padding-left: 5px;" size="large" name="logo-tiktok"></ion-icon>
+        </a>
+
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div *ngFor="let p of pages">
+        <ion-menu-toggle *ngIf="p.url" >
+          <ion-item *ngIf="p.nombre != 'Vivo Te Leo'"  [routerLink]="[p.url]">
+            <ion-label >
+              {{p.nombre}}
+            </ion-label> 
+          </ion-item>
+          <ion-item *ngIf="p.nombre == 'Vivo Te Leo'" >
+            <a href="https://vitoteleo.vitotvo.com/" target="_blank" >
+              
+            <ion-label >
+              {{p.nombre}}
+            </ion-label> 
+            </a>
+
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-item button *ngIf="p.children?.length > 0" (click)="p.open = !p.open" [class.active-parent]="p.open" detail="false"  >
+           <ion-label>
+             {{p.nombre}}
+           </ion-label>
+        </ion-item>
+        <ion-list *ngIf="p.open" class="sub-list">
+          <ion-menu-toggle autoHide="false">
+            <ion-item
+              class="sub-item"
+              *ngFor="let sub of p.children"
+              [routerLink]="[sub.url,sub.numero]"
+              routerDirection="root"
+              routerLinkActive="active"
+            >
+              <ion-label>{{sub.nombre}}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

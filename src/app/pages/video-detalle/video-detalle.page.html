@@ -1,0 +1,69 @@
+<!-- Empieza el Header -->
+<ion-header >
+  <ion-toolbar >
+    <ion-buttons>
+      <ion-button (click)="atras()" color="danger"  >
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+     
+      <ion-button *ngIf="favorit==false" (click)="favorito()" style="margin-left: 77%;"  float-right  color="danger">
+        <ion-icon    name="bookmark-outline" float-right></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="favorit==true" (click)="unfavorito()" style="margin-left: 77%;"  float-right  color="danger">
+        <ion-icon    name="bookmark" float-right></ion-icon>
+      </ion-button>
+      
+    </ion-buttons>
+ 
+  </ion-toolbar>
+</ion-header>
+<!-- Termina el Header -->
+
+<ion-content>
+    
+  
+   <!-- EMPIEZA EL VIDEO GRANDE DE CATEGORIA-->
+   <div *ngFor="let item of publ_prog" >    
+    <iframe  width="100%" height="315" [src]=" item.LINK_YOUTUBE  | domSanatizer " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+     
+    <h3 class="titulo" > {{ item.TITULO }} </h3> 
+
+    <p *ngIf="item.PARRAFO != '' " class="parrafo" >
+        {{ item.PARRAFO }}
+    </p>
+   </div>
+   <!-- TERMINA EL VIDEO GRANDE DE CATEGORIAS -->
+   <div style="border-top-style: solid;
+     border-top-color: #E81E25;" >
+   <ion-row class="utnoticias" > 
+    Videos Relacionados
+   </ion-row>
+ </div>
+
+      <!-- EMPIEZA LOS 6 VIDEOS FIJOS DE CATEGORIA-->
+
+      <ion-grid>
+        <ng-container>
+          <ion-card (click)="ir(item.ID_PUBLICACION, item.ID_PROGRAMA, 'video-detalle',0)"  *ngFor="let item of sugeridos">
+            <ion-row>
+              <ion-col  size="6" >
+                <div>
+                  <iframe  style='pointer-events: none !important;'  width="100%" height="100vh" [src]=" item.LINK_YOUTUBE | domSanatizer " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>    
+              </ion-col>
+              <ion-col size="6" >        
+                <p style="font-weight: 600;color: black;" class="line-clamp">
+                  {{ item.TITULO }}
+                </p>
+              
+            </ion-col>
+            </ion-row>
+          </ion-card>
+         
+        </ng-container>
+        </ion-grid>
+        <!-- TERMINA LOS 6 VIDEOS FIJOS DE CATEGORIA-->
+        <img src="../../../assets/imagenes/DP.gif">
+</ion-content>
+
+<app-footer></app-footer>

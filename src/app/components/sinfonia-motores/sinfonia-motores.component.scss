@@ -1,0 +1,132 @@
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.parr{
+    text-align: center;
+    color:black;
+    font-size: 14px;
+}
+.imgc{
+    width: 90%;
+    border-radius: 15px;
+}
+
+.divtext{
+    margin-left: 6%;
+    margin-top: -12%;
+}
+
+
+.pizq{
+    font-size: 11px;
+}
+.text-gris{
+    color: #808184;
+}
+#elred{
+    background: #E81E25 !important;
+    border-radius: 6px;
+}
+
+.utnoticias{
+    background: #E81E25;
+    width: 40%;
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.primera{
+    font-size: 50px;
+    color: #000e7f;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.segundo{
+    font-size: 50px;
+    color: #0070a8;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    
+    margin-top: -11%;
+}
+
+
+/* Animation */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.animatedapa {
+    background-image: url(/css/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-top:95px;
+    margin-bottom:60px;
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+ }
+ 
+ @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+ 
+ @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+ 
+ .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+ }

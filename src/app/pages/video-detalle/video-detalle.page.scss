@@ -1,0 +1,38 @@
+.titulo{
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.parrafo{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 17px;
+    line-height: 25px;
+}
+.utnoticias{
+    background: #E81E25;
+    width: 40%;
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;  
+}
+
+.logos{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }

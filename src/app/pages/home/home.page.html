@@ -1,0 +1,134 @@
+
+<app-header></app-header>
+
+<ion-content  >
+  <div  style="background-color: #F4F4F4 !important" >
+  <!-- EMPIEZA EL STREAMING-->
+
+  <ion-card class="animated animatedFadeInUp fadeInUp" >    
+    <iframe width="100%" height="315" [src]=" url_streaming | domSanatizer " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+  </ion-card>
+  <!-- TERMINA EL STREAMING-->
+
+  <!-- EMPIEZA LOS 6 VIDEOS FIJOS-->
+ 
+  <ion-grid class="animated animatedFadeInUp fadeInUp" >
+    <ng-container>
+      <ion-card  (click)="detalle(item.ID_PUBLICACION, item.ID_PROGRAMA,'home',0)"  *ngFor="let item of seis_ordenado" >
+        <ion-row  >
+          <ion-col size="6">
+            <div>
+              <iframe  (click)="detalle(item.ID_PUBLICACION, item.ID_PROGRAMA,'home')"  style='pointer-events: none !important;' id="player" width="100%" height="100vh" [src]=" item.LINK_YOUTUBE | domSanatizer " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+            </div>      
+          </ion-col>
+          <ion-col size="6" >        
+              <p style="font-weight: 600;" class="line-clamp">
+                {{ item.TITULO }}
+              </p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+      
+    </ng-container>
+  </ion-grid>
+</div>
+  <!-- TERMINA LOS VIDEOS FIJOS -->
+  <!-- CATEGORIAS -->
+
+  <div class="main_content_div sombreado">
+    <p style="font-weight: 700;"> Categorias </p>
+    <ion-slides [options]="slideOpts" >
+      <ion-slide class="test"  (click)="seleccionarimage(2)"  size="4">
+        <div class="back_image" [ngStyle]="styleObjectEconomia() "  style="background-image: url('../../../assets/imagenes/economia.jpg')">
+          <p class="item_name">Economía</p>
+        </div>
+      </ion-slide>
+      <ion-slide class="test" (click)="seleccionarimage(1)" size="4">
+        <div class="back_image" [ngStyle]="styleObjectDeporte() " style="background-image: url('../../../assets/imagenes/deportes.jpg')">
+          <p class="item_name">Deportes</p>
+        </div>
+      </ion-slide>
+      <ion-slide class="test" (click)="seleccionarimage(3)" size="4">
+        <div class="back_image" [ngStyle]="styleObjectTecnologia() " style="background-image: url('../../../assets/imagenes/tecnologia.jpg')">
+          <p class="item_name">Tecnología</p>
+        </div>
+      </ion-slide>
+      <ion-slide class="test" (click)="seleccionarimage(4)" size="4">
+        <div class="back_image" [ngStyle]="styleObjectEntretenimiento() " style="background-image: url('../../../assets/imagenes/entretenimiento.jpg')">
+          <p class="item_name">Entretenimiento</p>
+        </div>
+      </ion-slide>
+     
+    </ion-slides>
+  </div>
+  <!-- EMPIEZA EL VIDEO GRANDE DE CATEGORIA-->
+  <div class="animated animatedFadeInUp fadeInUp" style="background-color: #F4F4F4;" >
+  <ion-card >    
+    <iframe  width="100%" height="315" [src]=" catg_principal | domSanatizer " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+  </ion-card>
+   <!-- TERMINA EL VIDEO GRANDE DE CATEGORIAS -->
+
+   <!-- EMPIEZA LOS 6 VIDEOS FIJOS DE CATEGORIA-->
+  
+     <ion-grid>
+    <ng-container class="animated animatedFadeInUp fadeInUp" >
+
+      <ion-card (click)="detalle(item.ID_PUBLICACION, item.ID_PROGRAMA,'home',0)" *ngFor="let item of publ_categorias">
+        <ion-row  >
+          <ion-col size="6" >
+            <div>
+              <iframe style='pointer-events: none !important;'  width="100%" height="100vh" [src]=" item.LINK_YOUTUBE | domSanatizer " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </ion-col>
+          <ion-col size="6">
+            <div>
+             <ion-card-subtitle style="font-weight: 600;color: black;" class="line-clamp" >
+              {{item.TITULO}}
+            </ion-card-subtitle>
+            <ion-card-subtitle style="color: #E81E25;" >
+               {{sele_catg}}
+            </ion-card-subtitle>
+          </div>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+      
+    </ng-container>
+    </ion-grid>
+  </div>
+  <!-- TERMINA LOS VIDEOS FIJOS -->
+  <img src="../../../assets/imagenes/DP.gif">
+  <br>
+  <!-- EMPIEZA REPORTAJES -->
+  <div>
+    <p style="font-weight: 700;padding-left: 14px;" > Entrevistas y Reportajes Especiales </p>
+  </div>
+  <ion-grid style="background-color: #E81E25;" >
+    <ng-container class="animated animatedFadeInUp fadeInUp" >
+     <br>
+     <br>
+      <ion-slides [options]="slideOptsOne" >
+        <ion-slide (click)="detalle(item.ID_PUBLICACION, item.ID_PROGRAMA,'home',0)" *ngFor="let item of entevistas" size="8">
+          <ion-card style="padding-top:0px;margin-top:0px">
+            <ion-row>
+              <ion-col size="6" >
+                <iframe  style='pointer-events: none !important;'  width="100%" height="100vh" [src]="  item.LINK_YOUTUBE | domSanatizer " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </ion-col>
+              <ion-col size="6" >
+                <p style="font-weight: 600;color: black;text-align: left;" class="line-clamp"  >
+                  {{item.TITULO}}
+                </p>
+              </ion-col>
+            </ion-row>
+          </ion-card>         
+        </ion-slide>    
+      </ion-slides> 
+      <br>
+    </ng-container>
+  </ion-grid>
+
+
+  <!-- TERMINA LOS VIDEOS REPORTAJES -->
+ <app-footer></app-footer>
+ </ion-content>
+ 

@@ -1,0 +1,10 @@
+<svg id="Search_Big" data-name="Search Big" xmlns="http://www.w3.org/2000/svg" width="80" height="25" viewBox="0 0 80 25">
+  <g id="Rectángulo_5" data-name="Rectángulo 5" fill="none" stroke="#231f20" stroke-width="1">
+    <rect width="80" height="25" rx="12.5" stroke="none"/>
+    <rect x="0.5" y="0.5" width="79" height="24" rx="12" fill="none"/>
+  </g>
+  <g id="magnifying-glass" transform="translate(9.852 6.607)">
+    <path id="Trazado_42" data-name="Trazado 42" d="M11.731,11.185,8.867,8.321a5.029,5.029,0,1,0-.5.5l2.864,2.864a.355.355,0,0,0,.248.1.344.344,0,0,0,.248-.1A.353.353,0,0,0,11.731,11.185ZM.753,5.025a4.32,4.32,0,1,1,4.32,4.322A4.325,4.325,0,0,1,.753,5.025Z" transform="translate(-0.05 0)" fill="#231f20"/>
+  </g>
+  <text id="Search" transform="translate(29 17)" fill="#808184" font-size="12" font-family="Montserrat-Regular, Montserrat"><tspan x="0" y="0">Search</tspan></text>
+</svg>

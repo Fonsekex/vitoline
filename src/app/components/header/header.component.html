@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button color="danger" (click)="mostrarmenu()" >
+        <ion-icon style="font-size: 31px !important;"  name="menu-outline"></ion-icon>  
+      </ion-button>
+      <ion-button>
+
+      
+      </ion-button>
+      <ion-button>
+    
+      </ion-button>
+      <div class="logos"  >
+        <!-- Default Searchbar -->
+     
+       <!-- 
+         <img style="margin-right: 4%;"  src="../../../assets/imagenes/search.png" />
+         
+         <div style="border: 2px solid;
+         border-radius: 14px;
+         padding-top: 4px;margin-right: 4%" >
+          <ion-icon name="search-outline"></ion-icon>
+          Search
+         </div>
+         -->
+         <img (click)='buscar()' style="width: 28%;margin-right: 2%"  src="../../../assets/imagenes/Search Big.svg" />
+         <ion-button (click)='favorito()'   float-right  color="danger">
+          <ion-icon style="font-size: 25px !important;
+          padding-top: 5px;"    name="bookmark-outline" float-right></ion-icon>
+        </ion-button>
+        <img  (click)='home()' style="width: 16%;"  src="../../../assets/imagenes/logovito.svg" />
+
+      </div>
+     
+    </ion-buttons>
+ 
+  </ion-toolbar>
+</ion-header>
